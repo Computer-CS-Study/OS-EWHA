@@ -14,3 +14,6 @@ http://www.kocw.net/home/cview.do?cid=3646706b4347ef09
   - [Process 1](http://www.kocw.net/home/cview.do?lid=b31830a2b3cf1e60)
   - [Process 2](http://www.kocw.net/home/cview.do?lid=29d9a718cff884c3)
   - [Process 3](http://www.kocw.net/home/cview.do?lid=54e1a4abcd59272d)
+3. 3주차 (2개 강의)
+  - [Process Management 1](http://www.kocw.net/home/cview.do?lid=b988d89cb0bc07b3)
+  - [Process Management 2](http://www.kocw.net/home/cview.do?lid=3a5437eaa6c9e5b0)
