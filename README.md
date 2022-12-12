@@ -29,5 +29,11 @@ http://www.kocw.net/home/cview.do?cid=3646706b4347ef09
   - [Process Synchronization 1](http://www.kocw.net/home/cview.do?lid=5cf910642999f4a5)
   - [Process Synchronization 2](http://www.kocw.net/home/cview.do?lid=02fbc3fd5cb74e97)
 6. 6주차 (2개 강의)
+- 5주차 기준 미달로 인해 다시 한 번 들으며 복습하기로 함
+  - [Process Synchronization 1](http://www.kocw.net/home/cview.do?lid=5cf910642999f4a5)
+  - [Process Synchronization 2](http://www.kocw.net/home/cview.do?lid=02fbc3fd5cb74e97)
   - [Process Synchronization 3](http://www.kocw.net/home/cview.do?lid=c5e572cd1319ca6b)
+7. 7주차 (3개 강의)
   - [Process Synchronization 4(Concurrency Control)](http://www.kocw.net/home/cview.do?lid=3860d0b9372331de)
+  - [Deadlocks 1](http://www.kocw.net/home/cview.do?lid=a1bfe7f08156cb36)
+  - [Deadlocks 2](http://www.kocw.net/home/cview.do?lid=7351cb56948b1c9a)
