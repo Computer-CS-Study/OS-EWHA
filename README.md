@@ -36,3 +36,6 @@ http://www.kocw.net/home/cview.do?cid=3646706b4347ef09
   - [Process Synchronization 4(Concurrency Control)](http://www.kocw.net/home/cview.do?lid=3860d0b9372331de)
   - [Deadlocks 1](http://www.kocw.net/home/cview.do?lid=a1bfe7f08156cb36)
   - [Deadlocks 2](http://www.kocw.net/home/cview.do?lid=7351cb56948b1c9a)
+8. 8주차 (2개 강의)
+  - [Memory Management 1](http://www.kocw.net/home/cview.do?lid=c750795d11871a36)
+  - [Memory Management 2](http://www.kocw.net/home/cview.do?lid=122d1fe7b150f1fb)
