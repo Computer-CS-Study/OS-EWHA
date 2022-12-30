@@ -39,3 +39,6 @@ http://www.kocw.net/home/cview.do?cid=3646706b4347ef09
 8. 8주차 (2개 강의)
   - [Memory Management 1](http://www.kocw.net/home/cview.do?lid=c750795d11871a36)
   - [Memory Management 2](http://www.kocw.net/home/cview.do?lid=122d1fe7b150f1fb)
+9. 9주차 (2개 강의)
+  - [Memory Management 3](http://www.kocw.net/home/cview.do?lid=2eb97ae1bd16eb86)
+  - [Memory Management 4](http://www.kocw.net/home/cview.do?lid=f69b7331c7a4baf3)
