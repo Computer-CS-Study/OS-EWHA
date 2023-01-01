@@ -178,9 +178,36 @@ Allocation of Physical Memory → 물리적인 메모리를 어떻게 다룰 것
                 - physical memory를 동일한 크기의 frame으로 나눔
                 - logical memory를 동일 크기의 page로 나눔
                 - 운영체제는 모든 가용 프레임들을 관리
-                - 페이지 테이블을 사용하여 논리 주소를 물리 주소로 변환
                 - 외부 조각 발생 안함
                 - 내부 조각 발생 가능 (페이지 크기의 배수가 되리란 보장이 없기 때문이다.)
+                - 페이지 테이블을 사용하여 논리 주소를 물리 주소로 변환
+                    
+                    ![스크린샷 2023-01-01 오후 1.22.27.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f91fa08-0d0e-4dcf-94aa-fe792515da7c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.22.27.png)
+                    
+                    - 페이지만큼의 엔트리가 생긴다.
+                    - 테이블의 엔트리는 실제 물리적인 메모리의 프레임 넘버를 가리킨다.
+                    - Implementation of Page Table
+                        - 페이지 테이블은 메인 메모리에 상주
+                        - Page-table base register (PTBR)가 page table을 가리킴
+                        - Page-table length register (PLRT)가 테이블 크기를 보관
+                        - 모든 메모리 접근 연산에는 2번의 memory access 필요
+                        - page table 접근 1번, 실제 data/instruction 접근 1번
+                        - 속도 향상을 위해 associative register 혹은 translation look-aside buffer(TLB)라 불리는 고속의 lookup hardware cache 사용 → 있는지 없는지 검색을 해야하기 때문에 이런 현상이 발생
+                        - TLB의 정보는 CPU가 다른 프로세스로 넘어갈 때마다 플러쉬 해야 함
+                        
+                        ![스크린샷 2023-01-01 오후 1.47.23.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3694c795-e8d1-49bb-aa84-7a9e27e76ae3/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.47.23.png)
+                        
+            - Two-Level Page Table
+                
+                ![스크린샷 2023-01-01 오후 1.52.52.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/da1ae8a2-2fd6-486a-b5bd-6d6461504fd0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-01-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_1.52.52.png)
+                
+                - 현대의 컴퓨터는 address space가 매우 큰 프로그램 지원
+                - 32비트 주소 체계를 보통 사용(4G)
+                    - page size가 4K시 1M개의 page table entry 필요
+                    - 각 page entry가 4B시 프로세스당 4M의 page table 필요
+                    - 그러나, 대부분의 프로그램은 4G의 주소 공간 중 지극히 일부분만 사용하므로 page table 공간이 심하게 낭비됨
+                        - → Page table 자체를 page로 구성
+                        - → 사용되지 않는 주소 공간에 대한 outer page table의 엔트리 값은 NULL (대응하는 inner page table이 없음)
         - Segmentation
             - 의미있는 단위로 자르는걸 세그멘테이션 기법이라고 한다.
             - 프로그램을 구성하는 공간이 코드, 데이터, 스택으로 보통 구성되는데 세그멘테이션도 코드, 데이터, 스택 세그멘테이션을 만드는 것이다. → 더 잘게 자를 수도 있다 예를 들면 코드 공간을 각각의 함수 단위로 자를 수도 있다. → 의미 단위로 자르는 것을 얘기하고 크기가 균일하지는 않다. → 세그멘테이션은 다이나믹 스토리지 얼로케이션 문제가 발생한다.
