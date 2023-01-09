@@ -263,3 +263,8 @@ Allocation of Physical Memory → 물리적인 메모리를 어떻게 다룰 것
             - Protection
                 - 의미 단위이기 때문에 이것이 매우 자연스럽다.
         - Paged Segmentation
+            - 세그먼트를 여러개의 페이지로 나누는 방식
+            - 세그먼트에 대한 주소를 먼저 변환하게 됨
+            - segment번호와 세그먼트 안에서 얼마나 주소를 올라가야하는지 오프셋을 가지고 있음
+            - Allocation 문제가 생기지 않음 → hole이 안 생김
+            - 현실적으로 segmentation 기법을 쓰는 시스템은 거의 없다 → 쓰더라도 paged segmentation을 쓴다.
