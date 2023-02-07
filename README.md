@@ -52,3 +52,5 @@ http://www.kocw.net/home/cview.do?cid=3646706b4347ef09
   - [File Systems Implementation 2](http://www.kocw.net/home/cview.do?lid=8a9044bf83a07805)
   - [Disk Management and Scheduling 1](http://www.kocw.net/home/cview.do?lid=ebaa65ed3e52fb02)
   - [Disk Management and Scheduling 2](http://www.kocw.net/home/cview.do?lid=72edf0e34946e3c3)
+13. 13주차
+  - 총 정리 및 리마인드 겸 질문 모음으로 아는 만큼 대답하기
